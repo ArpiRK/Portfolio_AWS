@@ -1,0 +1,129 @@
+.experience {
+  padding: 8rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.timeline {
+  margin-top: 3rem;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--border);
+}
+
+.timeline-item {
+  padding-left: 2rem;
+  padding-bottom: 3rem;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -4px;
+  top: 6px;
+  width: 9px;
+  height: 9px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.3rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.timeline-role {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.timeline-period {
+  font-size: 0.8rem;
+  color: var(--accent);
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  padding: 0.2rem 0.7rem;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+.timeline-company {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.timeline-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.timeline-bullets {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.timeline-bullets li {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  padding: 0.3rem 0;
+  padding-left: 1.2rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.timeline-bullets li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+.timeline-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.timeline-tag {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+.sub-role {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.sub-role-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.3rem;
+}
+
+.sub-role-period {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.8rem;
+}
