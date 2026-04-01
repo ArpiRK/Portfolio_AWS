@@ -20,11 +20,11 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: Portfolio_AWS/my-portfolio
+        working-directory: my-portfolio
 
       - name: Build
         run: npm run build
-        working-directory: Portfolio_AWS/my-portfolio
+        working-directory: my-portfolio
 
       - name: Deploy to S3
         uses: aws-actions/configure-aws-credentials@v2
@@ -35,7 +35,7 @@ jobs:
 
       - name: Sync to S3
         run: |
-          aws s3 sync Portfolio_AWS/my-portfolio/dist/ s3://${{ secrets.S3_BUCKET }} --delete
+          aws s3 sync my-portfolio/dist/ s3://${{ secrets.S3_BUCKET }} --delete
 
       - name: Invalidate CloudFront
         run: |
