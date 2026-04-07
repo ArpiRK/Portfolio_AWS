@@ -38,7 +38,7 @@ jobs:
 
       - name: Sync to S3
         run: |
-          aws s3 sync my-portfolio/dist/ s3://${{ secrets.S3_BUCKET }} --delete
+          aws s3 sync my-portfolio/dist/ s3://${{ secrets.S3_BUCKET }} --delete --exclude "files/*"
 
       - name: Invalidate CloudFront
         run: |
