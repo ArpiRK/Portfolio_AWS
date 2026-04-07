@@ -3,7 +3,7 @@ import './Skills.css'
 const skillGroups = [
   {
     title: '.NET & Backend',
-    skills: ['C#', '.NET 8', 'ASP.NET Core', 'Entity Framework Core', 'Web API', 'WCF', 'REST APIs', 'Microservices', 'SOLID', 'Clean Architecture']
+    skills: ['C#', '.NET 8', 'ASP.NET Core', 'Entity Framework Core', 'Web API', 'REST APIs', 'Microservices', 'SOLID', 'Clean Architecture']
   },
   {
     title: 'Identity & Auth',
@@ -11,19 +11,19 @@ const skillGroups = [
   },
   {
     title: 'Cloud & DevOps',
-    skills: ['Microsoft Azure', 'App Services', 'Docker', 'Kubernetes', 'Terraform', 'GitHub Actions', 'Azure DevOps', 'CI/CD', 'Application Insights']
+    skills: ['Azure', 'AWS S3', 'CloudFront', 'Lambda', 'API Gateway', 'Docker', 'Kubernetes', 'Terraform', 'GitHub Actions', 'CI/CD', 'Application Insights']
   },
   {
     title: 'Data & Integration',
-    skills: ['SQL Server', 'T-SQL', 'SSIS', 'ETL Pipelines', 'Stored Procedures', 'SAP', 'BlackLine', 'Service Bus']
+    skills: ['SQL Server', 'T-SQL', 'SSIS', 'ETL Pipelines', 'SAP', 'BlackLine', 'Service Bus']
   },
   {
     title: 'AI & Emerging',
-    skills: ['Claude API', 'OpenAI GPT-4', 'LlamaIndex', 'MCP', 'ChromaDB', 'Prompt Engineering', 'LLM Integration']
+    skills: ['Claude API', 'OpenAI GPT-4', 'LlamaIndex', 'MCP', 'ChromaDB', 'LLM Integration']
   },
   {
     title: 'Tools & Practices',
-    skills: ['Git', 'Visual Studio', 'Postman', 'Agile/Scrum', 'Code Reviews', 'Azure Key Vault', 'IIS']
+    skills: ['Git', 'Visual Studio', 'Postman', 'Agile/Scrum', 'Azure Key Vault', 'IIS']
   }
 ]
 

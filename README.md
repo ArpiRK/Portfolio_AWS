@@ -35,6 +35,7 @@ Contact / Resume Form
 ## Project Structure
 
 ```
+Portfolio_AWS/
 ├── .github/
 │   └── workflows/
 │       └── deploy.yml          # CI/CD pipeline
@@ -43,33 +44,44 @@ Contact / Resume Form
 │   │   └── index.mjs
 │   └── sendResume/             # Lambda: resume email delivery
 │       └── index.mjs
-└── src/
-    ├── components/
-    │   ├── Navbar/
-    │   ├── Hero/
-    │   ├── About/
-    │   ├── Skills/
-    │   ├── Experience/
-    │   ├── Projects/
-    │   └── Contact/
-    ├── App.jsx
-    └── main.jsx
+└── my-portfolio/               # React frontend (Vite)
+    ├── src/
+    │   ├── components/
+    │   │   ├── Navbar/
+    │   │   ├── Hero/
+    │   │   ├── About/
+    │   │   ├── Skills/
+    │   │   ├── Experience/
+    │   │   ├── Projects/
+    │   │   └── Contact/
+    │   ├── App.jsx
+    │   └── main.jsx
+    ├── public/
+    └── index.html
 ```
 
 ---
 
 ## Local Development
 
-**Prerequisites:** Node.js 20+, npm
+### Prerequisites
+
+- Node.js 20+
+- npm
+
+### Run the frontend
 
 ```bash
+cd my-portfolio
 npm install
 npm run dev
 ```
 
-Dev server starts at `http://localhost:5173`.
+The dev server starts at `http://localhost:5173`.
 
-Create a `.env` file (not committed):
+### Environment variable
+
+Create `my-portfolio/.env` (not committed):
 
 ```
 VITE_API_BASE_URL=https://<your-api-gateway-id>.execute-api.us-east-1.amazonaws.com
@@ -97,7 +109,7 @@ The pipeline: installs → builds → syncs to S3 → invalidates CloudFront cac
 
 ## Lambda Functions
 
-Both functions are deployed as `.zip` packages to AWS Lambda.
+Both functions are deployed manually as `.zip` packages to AWS Lambda.
 
 ### sendContact
 
@@ -109,7 +121,25 @@ Handles contact form submissions. Validates input, rate-limits by IP (3 req/min)
 
 Accepts an email address and delivers a resume download link via SendGrid.
 
-**SendGrid API key** is stored in AWS Parameter Store at `/portfolio/sendgrid-api-key` and fetched at runtime — never stored in code or environment variables.
+**SendGrid API key** is stored in AWS Parameter Store at `/portfolio/sendgrid-api-key` and fetched at runtime — it is never stored in code or environment variables.
+
+---
+
+## CI/CD Pipeline
+
+```yaml
+on:
+  push:
+    branches: [main]
+
+steps:
+  1. Checkout
+  2. Setup Node.js 20
+  3. npm install && npm run build
+  4. Configure AWS credentials (from GitHub Secrets)
+  5. aws s3 sync dist/ → S3
+  6. CloudFront cache invalidation
+```
 
 ---
 

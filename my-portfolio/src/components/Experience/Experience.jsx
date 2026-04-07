@@ -15,13 +15,14 @@ function Experience() {
           </div>
           <div className="timeline-company">Azbor Tech · Chicago, IL</div>
           <ul className="timeline-bullets">
-            <li>Migrating 3 legacy .NET Framework apps to .NET 8 with OAuth 2.0/OIDC and Azure AD</li>
-            <li>Led cloud migration to Azure — App Services, Azure SQL, Service Bus for async messaging</li>
-            <li>Applied DDD with CQRS pattern, improving maintainability and enabling independent deployments</li>
-            <li>Containerized services with Docker and configured Azure deployment pipelines</li>
+            <li>Modernizing 3 legacy .NET Framework apps to .NET 8 — clean architecture, CQRS, async/await, and EF Core repository pattern</li>
+            <li>Built and deployed React + Vite frontend on AWS S3 with CloudFront CDN and GitHub Actions CI/CD pipeline for zero-touch deployments</li>
+            <li>Designed serverless API layer using AWS Lambda and API Gateway — secrets managed via AWS Systems Manager Parameter Store</li>
+            <li>Containerized .NET microservices with Docker and orchestrated with Kubernetes for consistent deployments across environments</li>
+            <li>Implemented OAuth 2.0/OIDC with Azure AD across migrated services, replacing legacy authentication flows</li>
           </ul>
           <div className="timeline-tags">
-            {['.NET 8', 'C#', 'Azure', 'Docker', 'OAuth 2.0', 'CQRS', 'Service Bus'].map(t => (
+            {['.NET 8', 'C#', 'React', 'AWS', 'Lambda', 'Docker', 'Kubernetes', 'OAuth 2.0', 'CQRS', 'GitHub Actions'].map(t => (
               <span className="timeline-tag" key={t}>{t}</span>
             ))}
           </div>
@@ -32,7 +33,7 @@ function Experience() {
             <div className="timeline-role">Software Engineer → Team Lead</div>
             <div className="timeline-period">2014 – 2023</div>
           </div>
-          <div className="timeline-company">Accenture Solutions · India</div>
+          <div className="timeline-company">Accenture Solutions</div>
 
           <div className="sub-role">
             <div className="sub-role-title">Team Lead</div>
@@ -40,8 +41,8 @@ function Experience() {
             <ul className="timeline-bullets">
               <li>Led 6-engineer team building financial platforms for Fortune 100 clients — 5,000+ users, 30K+ monthly transactions</li>
               <li>Built SAP-BlackLine API integration handling 10K+ requests/hour at sub-200ms latency</li>
-              <li>Reduced financial report generation time by 60% through query optimization and caching</li>
-              <li>Implemented Azure AD SSO with OAuth 2.0 and OIDC — replaced legacy auth across tool suite</li>
+              <li>Reduced financial report generation time by 60% through SQL query optimization and caching</li>
+              <li>Implemented Azure AD SSO with OAuth 2.0 and OIDC — replaced legacy auth across enterprise tool suite</li>
               <li>Maintained 99.9% uptime with zero P1 incidents using Application Insights monitoring</li>
             </ul>
           </div>
@@ -62,13 +63,13 @@ function Experience() {
             <div className="sub-role-period">2014 – 2018</div>
             <ul className="timeline-bullets">
               <li>Built BlackLine automation processing 30K+ journal entries monthly</li>
-              <li>SQL Server query optimization achieving 30-70% improvement in report generation</li>
+              <li>SQL Server query optimization achieving 30–70% improvement in report generation</li>
               <li>Designed data archival pipeline for 5+ years of historical financial records</li>
             </ul>
           </div>
 
           <div className="timeline-tags" style={{marginTop: '1rem'}}>
-            {['C#', 'ASP.NET Core', 'SQL Server', 'SSIS', 'Azure AD', 'OAuth 2.0', 'SAML 2.0', 'Application Insights', 'SAP', 'BlackLine'].map(t => (
+            {['C#', 'ASP.NET Core', 'SQL Server', 'SSIS', 'BizTalk', 'Azure AD', 'OAuth 2.0', 'SAML 2.0', 'Application Insights', 'SAP', 'BlackLine'].map(t => (
               <span className="timeline-tag" key={t}>{t}</span>
             ))}
           </div>
