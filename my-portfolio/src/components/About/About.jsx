@@ -16,6 +16,8 @@ function About() {
         delivered systems handling 30K+ monthly transactions at sub-200ms latency,
         and currently modernizing legacy .NET systems to cloud-native architecture
         using AWS, React, Docker, and Kubernetes.
+        I also build AI-powered applications integrating LLMs (Claude API, GPT-4, 
+        Llama-3) and RAG pipelines into production cloud systems.
         I hold an M.S. in Computer Science from Illinois Institute of Technology.
       </p>
 
@@ -42,6 +44,14 @@ function About() {
           <p className="pillar-text">
             Azure and AWS, Docker, Kubernetes, Terraform, CI/CD — deploying
             and operating systems at scale across cloud platforms.
+          </p>
+        </div>
+        <div className="pillar">
+          <div className="pillar-icon">🤖</div>
+          <div className="pillar-title">AI & LLM Integration</div>
+          <p className="pillar-text">
+            Claude API, GPT-4, LlamaIndex, ChromaDB, RAG pipelines — building 
+            AI-powered features into production applications.
           </p>
         </div>
       </div>

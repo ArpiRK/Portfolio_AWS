@@ -12,7 +12,7 @@ function Navbar() {
 
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-      <div className="navbar-logo">Arpitha R.</div>
+      <a href="#hero" className="navbar-logo">Arpitha Ramakrishnaiah</a>
       <ul className="navbar-links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>

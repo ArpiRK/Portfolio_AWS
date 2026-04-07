@@ -56,3 +56,9 @@
   background: var(--accent-hover) !important;
   color: #000 !important;
 }
+
+.navbar-logo {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}

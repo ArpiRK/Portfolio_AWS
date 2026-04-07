@@ -17,6 +17,7 @@ function Hero() {
           <p className="hero-subtitle">
             9+ years building enterprise financial platforms. Modernizing
             legacy .NET systems to cloud-native architecture on Azure and AWS.
+            Now integrating AI/LLM capabilities into production systems.
             Based in Chicago, IL.
           </p>
           <div className="hero-buttons">

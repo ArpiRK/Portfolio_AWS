@@ -2,6 +2,12 @@ import './Projects.css'
 
 const projects = [
   {
+  title: 'AWS Portfolio — AI Chatbot',
+  desc: 'Production portfolio on AWS S3 + CloudFront with AI-powered chatbot integrating Claude API via Lambda — handles natural language Q&A about experience and skills, resume delivery via SendGrid, and CI/CD via GitHub Actions.',
+  tags: ['Claude API', 'AWS Lambda', 'React', 'S3', 'CloudFront', 'GitHub Actions'],
+  link: 'https://github.com/ArpiRK/Portfolio_AWS'
+  },
+  {
     title: 'MCP Agentic Analytics Platform',
     desc: 'Agentic analytics platform where a LlamaIndex agent answers natural-language business questions via MCP tool servers and generates charts on the fly.',
     tags: ['Python', 'MCP', 'LlamaIndex', 'PostgreSQL', 'Vector DB', 'Streamlit'],
@@ -18,18 +24,6 @@ const projects = [
     desc: 'Natural language BI tool that lets business users query financial data in plain English. Translates questions into SQL and returns visual insights.',
     tags: ['Python', 'LlamaIndex', 'GPT-4', 'ChromaDB', 'PostgreSQL'],
     link: 'https://github.com/ArpiRK/GITHub-dashboard'
-  },
-  {
-    title: 'ASP.NET Core Portfolio',
-    desc: 'Full-stack portfolio built with ASP.NET Core MVC, hosted on Azure App Service. Features AI chatbot, resume delivery via SendGrid, and Application Insights monitoring.',
-    tags: ['ASP.NET Core', 'C#', 'Azure', 'SendGrid', 'Application Insights', 'Terraform'],
-    link: 'https://github.com/ArpiRK/Portfolio'
-  },
-  {
-    title: 'SmartPortables Retail UI',
-    desc: 'E-commerce retail frontend for a consumer electronics brand. Product catalog, cart, and checkout flow built with React.',
-    tags: ['React', 'Node.js', 'CSS'],
-    link: 'https://github.com/ArpiRK/Retail-UI'
   }
 ]
 
