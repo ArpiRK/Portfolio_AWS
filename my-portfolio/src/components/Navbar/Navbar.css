@@ -62,3 +62,17 @@
   color: inherit;
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-logo {
+    font-size: 0.95rem;
+  }
+}

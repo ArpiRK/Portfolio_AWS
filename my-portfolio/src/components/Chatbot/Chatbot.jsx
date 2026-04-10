@@ -14,6 +14,8 @@ export default function Chatbot() {
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
+  const [fitScore, setFitScore] = useState(null);
+  const [sessionId] = useState(`session-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`);
   const messagesEndRef = useRef(null);
 
   useEffect(() => {
@@ -40,11 +42,14 @@ export default function Chatbot() {
         body: JSON.stringify({
           message: input,
           history: history.slice(0, -1),
+          sessionId: sessionId
         }),
       });
 
       const data = await response.json();
       setMessages([...updatedMessages, { role: "assistant", content: data.reply }]);
+      if (data.fitScore) setFitScore(data.fitScore);
+
     } catch {
       setMessages([...updatedMessages, {
         role: "assistant",
@@ -70,6 +75,11 @@ export default function Chatbot() {
             <span>💬 Ask about Arpitha</span>
             <button onClick={() => setIsOpen(false)}>✕</button>
           </div>
+          {fitScore && (
+            <div className="chatbot-fit-score">
+              Job Fit Score: <strong>{fitScore}%</strong>
+            </div>
+          )}
           <div className="chatbot-messages">
             {messages.map((msg, i) => (
               <div key={i} className={`chatbot-message ${msg.role}`}>
