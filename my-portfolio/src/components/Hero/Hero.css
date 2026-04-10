@@ -171,3 +171,18 @@
   .hero-buttons { justify-content: center; }
   .hero-stats { gap: 1.5rem; justify-content: center; flex-wrap: wrap; }
 }
+
+@media (max-width: 768px) {
+  .stat-number {
+    font-size: 1.5rem;
+    font-family: Arial, sans-serif;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+  }
+
+  .hero-stats {
+    gap: 1rem;
+  }
+}
