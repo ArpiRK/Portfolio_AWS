@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { InlineWidget } from 'react-calendly'
 import './Contact.css'
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL
@@ -38,7 +39,9 @@ function Contact() {
       <div className="section-label">Get In Touch</div>
       <h2 className="section-title">Let's Build Something Together</h2>
       <p className="contact-desc">Have a senior .NET engineering opportunity? I am actively looking for my next role and would love to connect.</p>
+
       <div className="contact-grid">
+
         <div className="contact-card">
           <h3 className="contact-card-title">Get My Resume</h3>
           <p className="contact-card-desc">Enter your email and I'll send it straight to your inbox.</p>
@@ -48,6 +51,7 @@ function Contact() {
             {resumeMsg && <p className={`contact-feedback ${resumeStatus}`}>{resumeMsg}</p>}
           </form>
         </div>
+
         <div className="contact-card">
           <h3 className="contact-card-title">Send a Message</h3>
           <p className="contact-card-desc">I'll reply from my domain email within 1–2 business days.</p>
@@ -59,7 +63,27 @@ function Contact() {
             {contactMsg && <p className={`contact-feedback ${contactStatus}`}>{contactMsg}</p>}
           </form>
         </div>
+
+        <div className="contact-card">
+          <h3 className="contact-card-title">Book a Meeting</h3>
+          <p className="contact-card-desc">Schedule a 30-minute call to discuss opportunities directly.</p>
+          <div className="calendly-wrapper">
+            <InlineWidget
+              url="https://calendly.com/arpithar"
+              styles={{ height: '550px', minWidth: '280px' }}
+              pageSettings={{
+                backgroundColor: '111111',
+                hideEventTypeDetails: false,
+                hideLandingPageDetails: false,
+                primaryColor: '22c55e',
+                textColor: 'ffffff'
+              }}
+            />
+          </div>
+        </div>
+
       </div>
+
       <div className="contact-social">
         <div className="contact-buttons">
           <a href="https://www.linkedin.com/in/arpitha-ramakrishnaiah/" target="_blank" rel="noreferrer" className="btn-primary">LinkedIn</a>
