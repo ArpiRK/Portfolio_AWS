@@ -1,0 +1,8 @@
+{
+  "name": "chatbot",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "@aws-sdk/client-ssm": "^3.1025.0"
+  }
+}
