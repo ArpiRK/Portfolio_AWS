@@ -3,8 +3,8 @@ import './Projects.css'
 const projects = [
   {
   title: 'AWS Portfolio — AI Chatbot',
-  desc: 'Production portfolio on AWS S3 + CloudFront with AI-powered chatbot integrating Claude API via Lambda — handles natural language Q&A about experience and skills, resume delivery via SendGrid, and CI/CD via GitHub Actions.',
-  tags: ['Claude API', 'AWS Lambda', 'React', 'S3', 'CloudFront', 'GitHub Actions'],
+  desc: 'Production portfolio on AWS S3 + CloudFront with an agentic AI assistant — detects visitor intent, maintains DynamoDB session memory, sends resumes via SendGrid, checks real-time Calendly availability, and returns clickable booking slots. CI/CD via GitHub Actions.',
+  tags: ['Claude API', 'AWS Lambda', 'React', 'S3', 'CloudFront', 'GitHub Actions','DynamoDB'],
   link: 'https://github.com/ArpiRK/Portfolio_AWS'
   },
   {

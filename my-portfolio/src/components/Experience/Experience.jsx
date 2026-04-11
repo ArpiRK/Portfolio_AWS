@@ -20,6 +20,7 @@ function Experience() {
             <li>Designed serverless API layer using AWS Lambda and API Gateway — secrets managed via AWS Systems Manager Parameter Store</li>
             <li>Containerized .NET microservices with Docker and orchestrated with Kubernetes for consistent deployments across environments</li>
             <li>Implemented OAuth 2.0/OIDC with Azure AD across migrated services, replacing legacy authentication flows</li>
+            <li>Integrated Claude API into production agentic chatbot — visitor intent detection, DynamoDB session memory, real-time Calendly scheduling, and resume delivery via SendGrid Lambda orchestration</li>
           </ul>
           <div className="timeline-tags">
             {['.NET 8', 'C#', 'React', 'AWS', 'Lambda', 'Docker', 'Kubernetes', 'OAuth 2.0', 'CQRS', 'GitHub Actions'].map(t => (
