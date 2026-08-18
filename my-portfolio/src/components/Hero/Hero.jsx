@@ -26,6 +26,7 @@ function Hero() {
             <a href="https://www.linkedin.com/in/arpitha-ramakrishnaiah/" target="_blank" rel="noreferrer" className="btn-secondary">LinkedIn</a>
             <a href="https://github.com/ArpiRK" target="_blank" rel="noreferrer" className="btn-secondary">GitHub</a>
           </div>
+          {/* Removed from portfolio — not required, kept here in case it comes back:
           <div className="hero-stats">
             <div>
               <div className="stat-number">9+</div>
@@ -44,6 +45,7 @@ function Hero() {
               <div className="stat-label">P1 Incidents</div>
             </div>
           </div>
+          */}
         </div>
         <div className="hero-photo">
           <div className="hero-photo-ring">

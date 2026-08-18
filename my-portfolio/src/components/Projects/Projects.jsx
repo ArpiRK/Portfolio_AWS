@@ -24,12 +24,13 @@ const projects = [
     tags: ['GPT-4', 'Llama-3', 'React', 'Node.js', 'Python'],
     link: 'https://github.com/ArpiRK/GuardianAI'
   },
-  {
-    title: 'LLM Analytics Dashboard',
-    desc: 'Natural language BI tool that lets business users query financial data in plain English. Translates questions into SQL and returns visual insights.',
-    tags: ['Python', 'LlamaIndex', 'GPT-4', 'ChromaDB', 'PostgreSQL'],
-    link: 'https://github.com/ArpiRK/GITHub-dashboard'
-  }
+  // Removed from portfolio — not required right now, kept here in case it comes back:
+  // {
+  //   title: 'GitHub Analytics Dashboard',
+  //   desc: 'Desktop app built with Python and Tkinter for exploring GitHub repository analytics — browse your own repos or any public profile and view interactive charts for stars/forks/issues, language breakdown, commit frequency, and top contributors. Supports GitHub personal access token, GitHub OAuth, and Google Sign-In authentication, with a GitHub-style dark theme.',
+  //   tags: ['Python', 'Tkinter', 'Matplotlib', 'GitHub API', 'OAuth', 'Flask'],
+  //   link: 'https://github.com/ArpiRK/GITHub-dashboard'
+  // }
 ]
 
 function Projects() {
