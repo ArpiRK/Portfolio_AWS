@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import './Navbar.css'
 
 function Navbar() {
@@ -15,14 +16,15 @@ function Navbar() {
 
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-      <a href="#hero" className="navbar-logo">Arpitha R.</a>
-      
+      <Link to="/#hero" className="navbar-logo">Arpitha R.</Link>
+
       <ul className="navbar-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact" className="navbar-cta">Say Hello</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#skills">Skills</a></li>
+        <li><a href="/#experience">Experience</a></li>
+        <li><a href="/#projects">Projects</a></li>
+        {/* Blog — not live yet, will push later: <li><Link to="/blog">Blog</Link></li> */}
+        <li><a href="/#contact" className="navbar-cta">Say Hello</a></li>
       </ul>
 
       <button 
@@ -35,11 +37,12 @@ function Navbar() {
 
       {menuOpen && (
         <div className="navbar-mobile-menu">
-          <a href="#about" onClick={closeMenu}>About</a>
-          <a href="#skills" onClick={closeMenu}>Skills</a>
-          <a href="#experience" onClick={closeMenu}>Experience</a>
-          <a href="#projects" onClick={closeMenu}>Projects</a>
-          <a href="#contact" onClick={closeMenu} className="navbar-cta">Say Hello</a>
+          <a href="/#about" onClick={closeMenu}>About</a>
+          <a href="/#skills" onClick={closeMenu}>Skills</a>
+          <a href="/#experience" onClick={closeMenu}>Experience</a>
+          <a href="/#projects" onClick={closeMenu}>Projects</a>
+          {/* Blog — not live yet, will push later: <Link to="/blog" onClick={closeMenu}>Blog</Link> */}
+          <a href="/#contact" onClick={closeMenu} className="navbar-cta">Say Hello</a>
         </div>
       )}
     </nav>

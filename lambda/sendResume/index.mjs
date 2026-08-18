@@ -1,6 +1,8 @@
 import { SSMClient, GetParameterCommand } from '@aws-sdk/client-ssm'
+import { SESClient, SendEmailCommand } from '@aws-sdk/client-ses'
 
 const ssm = new SSMClient({ region: process.env.AWS_REGION ?? 'us-east-1' })
+const ses = new SESClient({ region: process.env.AWS_REGION ?? 'us-east-1' })
 
 // ── Rate limiter (in-memory, per Lambda instance) ──────────────────────────
 const rateLimitMap = new Map()
@@ -32,18 +34,18 @@ function maskEmail(email) {
   return local.length <= 1 ? `*@${domain}` : `${local[0]}***@${domain}`
 }
 
-// ── Fetch SendGrid key from Parameter Store ─────────────────────────────────
-let cachedApiKey = null
-async function getApiKey() {
-  if (cachedApiKey) return cachedApiKey
-  const cmd = new GetParameterCommand({
-    Name: '/portfolio/sendgrid-api-key',
-    WithDecryption: true,
-  })
-  const res = await ssm.send(cmd)
-  cachedApiKey = res.Parameter.Value
-  return cachedApiKey
-}
+// ── OLD: Fetch SendGrid key from Parameter Store (unused after SES migration) ──
+// let cachedApiKey = null
+// async function getApiKey() {
+//   if (cachedApiKey) return cachedApiKey
+//   const cmd = new GetParameterCommand({
+//     Name: '/portfolio/sendgrid-api-key',
+//     WithDecryption: true,
+//   })
+//   const res = await ssm.send(cmd)
+//   cachedApiKey = res.Parameter.Value
+//   return cachedApiKey
+// }
 
 // ── CORS headers ────────────────────────────────────────────────────────────
 const CORS = {
@@ -84,7 +86,47 @@ export const handler = async (event) => {
   if (!tryConsume(clientIp))
     return respond(429, { success: false, message: 'Too many requests. Please try again later.' })
 
-  // Send via SendGrid
+  // Send via AWS SES
+  try {
+    const htmlBody = `
+      <div style="font-family:sans-serif;max-width:600px;margin:0 auto">
+        <h2 style="color:#10b981">Hi there,</h2>
+        <p>Thanks for your interest! Please find my resume at the link below.</p>
+        <p>
+          <a href="https://arpitharamakrishnaiah.com/files/Arpitha_Resume.pdf"
+             style="background:#10b981;color:#000;padding:12px 24px;border-radius:6px;text-decoration:none;font-weight:600;display:inline-block">
+            Download Resume (PDF)
+          </a>
+        </p>
+        <p style="color:#666;font-size:0.9rem">
+          Feel free to reach out at
+          <a href="mailto:contact@arpitharamakrishnaiah.com">contact@arpitharamakrishnaiah.com</a>
+          if you have any questions.
+        </p>
+        <hr style="border:none;border-top:1px solid #eee;margin:2rem 0"/>
+        <p style="color:#999;font-size:0.8rem">Arpitha Ramakrishnaiah · Senior .NET Engineer · Chicago, IL</p>
+      </div>
+    `
+
+    await ses.send(new SendEmailCommand({
+      Source: 'Arpitha Ramakrishnaiah <contact@arpitharamakrishnaiah.com>',
+      Destination: { ToAddresses: [email] },
+      ReplyToAddresses: ['contact@arpitharamakrishnaiah.com'],
+      Message: {
+        Subject: { Data: 'Here is my resume — Arpitha Ramakrishnaiah' },
+        Body: { Html: { Data: htmlBody } },
+      },
+    }))
+
+    console.log(`Resume sent at ${timestamp} to ${maskEmail(email)} from ${clientIp}`)
+    return respond(200, { success: true, message: 'Sent' })
+
+  } catch (err) {
+    console.error('Unexpected error:', err)
+    return respond(500, { success: false, message: 'Unable to send resume right now. Please try again shortly.' })
+  }
+
+  /* ── OLD: SendGrid path (kept for rollback — swap this try block back in, and getApiKey above) ──
   try {
     const apiKey = await getApiKey()
 
@@ -106,7 +148,7 @@ export const handler = async (event) => {
                 </a>
               </p>
               <p style="color:#666;font-size:0.9rem">
-                Feel free to reach out at 
+                Feel free to reach out at
                 <a href="mailto:contact@arpitharamakrishnaiah.com">contact@arpitharamakrishnaiah.com</a>
                 if you have any questions.
               </p>
@@ -140,4 +182,5 @@ export const handler = async (event) => {
     console.error('Unexpected error:', err)
     return respond(500, { success: false, message: 'Unable to send resume right now. Please try again shortly.' })
   }
+  ── END OLD ── */
 }

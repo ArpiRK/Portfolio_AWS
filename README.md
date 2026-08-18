@@ -17,7 +17,7 @@ Contact / Resume Form
   └── API Gateway (REST)
         ├── /sendContact  → Lambda (sendContact)
         └── /sendResume   → Lambda (sendResume)
-              └── SendGrid (email delivery)
+              └── Amazon SES (email delivery)
 
 AI Chatbot
   └── API Gateway (HTTP)
@@ -33,11 +33,11 @@ AI Chatbot
 |---|---|
 | Frontend | React 19, Vite 8 |
 | Hosting | AWS S3 + CloudFront |
-| Backend | AWS Lambda (Node.js 20, ES modules) |
+| Backend | AWS Lambda (Node.js 22, ES modules) |
 | AI Chatbot | Claude API (claude-haiku), agentic intent routing |
 | Session Memory | AWS DynamoDB (TTL: 2 hours) |
 | Scheduling | Calendly API (real-time availability) |
-| Email | SendGrid via AWS API Gateway |
+| Email | Amazon SES via AWS API Gateway |
 | Secrets | AWS Systems Manager Parameter Store |
 | CI/CD | GitHub Actions → S3 sync + CloudFront invalidation |
 
@@ -95,7 +95,7 @@ The portfolio chatbot goes beyond simple Q&A. It detects visitor intent and comp
 **AWS Parameter Store secrets:**
 - `/portfolio/Claude_API_Key` — Claude API key
 - `/portfolio/calendly` — Calendly personal access token
-- `/portfolio/sendgrid-api-key` — SendGrid API key
+<!-- Previous: `/portfolio/sendgrid-api-key` — SendGrid API key — retired after migrating email delivery to Amazon SES (IAM role, no API key needed) -->
 
 > **Note:** The chatbot Lambda (`lambda/chatbot/index.mjs`) is deployed directly via the AWS console, not through CI/CD. The file in this repo reflects the current deployed version but must be manually re-uploaded if changed locally.
 
@@ -169,7 +169,8 @@ Handles contact form submissions. Validates input, rate-limits by IP (3 req/min)
 
 ### sendResume
 
-Accepts an email address and delivers a resume download link via SendGrid. Also called internally by the chatbot Lambda when a visitor requests the resume via chat.
+<!-- Previous: "Accepts an email address and delivers a resume download link via SendGrid." — migrated to Amazon SES -->
+Accepts an email address and delivers a resume download link via Amazon SES. Also called internally by the chatbot Lambda when a visitor requests the resume via chat.
 
 ### portfolio-chatbot
 

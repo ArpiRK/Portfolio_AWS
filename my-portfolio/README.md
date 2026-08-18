@@ -17,8 +17,8 @@ Contact / Resume Form
   └── API Gateway (REST)
         ├── /contact  → Lambda (sendContact)
         └── /resume   → Lambda (sendResume)
-              └── SendGrid (email delivery)
-                    API key stored in AWS Parameter Store
+              └── Amazon SES (email delivery)
+                    Delivered via IAM role, no API key needed
 ```
 
 | Layer | Technology |
@@ -26,7 +26,7 @@ Contact / Resume Form
 | Frontend | React 19, Vite 8 |
 | Hosting | AWS S3 + CloudFront |
 | Backend | AWS Lambda (Node.js 20, ES modules) |
-| Email | SendGrid via AWS API Gateway |
+| Email | Amazon SES via AWS API Gateway |
 | Secrets | AWS Systems Manager Parameter Store |
 | CI/CD | GitHub Actions → S3 sync + CloudFront invalidation |
 
@@ -107,9 +107,10 @@ Handles contact form submissions. Validates input, rate-limits by IP (3 req/min)
 
 ### sendResume
 
-Accepts an email address and delivers a resume download link via SendGrid.
+<!-- Previous: "Accepts an email address and delivers a resume download link via SendGrid." / SendGrid API key stored in Parameter Store at `/portfolio/sendgrid-api-key` — migrated to Amazon SES -->
+Accepts an email address and delivers a resume download link via Amazon SES.
 
-**SendGrid API key** is stored in AWS Parameter Store at `/portfolio/sendgrid-api-key` and fetched at runtime — never stored in code or environment variables.
+Sent via the AWS SDK using the Lambda's IAM role — no API key to manage or rotate.
 
 ---
 

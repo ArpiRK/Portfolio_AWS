@@ -3,7 +3,9 @@ import './Skills.css'
 const skillGroups = [
   {
     title: '.NET & Backend',
-    skills: ['C#', '.NET 8', 'ASP.NET Core', 'Entity Framework Core', 'Web API', 'REST APIs', 'Microservices', 'SOLID', 'Clean Architecture']
+    // Previous list — commented out, not deleted:
+    // skills: ['C#', '.NET 8', 'ASP.NET Core', 'Entity Framework Core', 'Web API', 'REST APIs', 'Microservices', 'SOLID', 'Clean Architecture']
+    skills: ['C#', '.NET 8', 'ASP.NET Core', 'Entity Framework Core', 'Web API', 'REST APIs', 'SOLID', 'Clean Architecture']
   },
   {
     title: 'Identity & Auth',
@@ -11,7 +13,9 @@ const skillGroups = [
   },
   {
     title: 'Cloud & DevOps',
-    skills: ['Azure', 'AWS S3', 'CloudFront', 'Lambda', 'API Gateway', 'Docker', 'Kubernetes', 'Terraform', 'GitHub Actions', 'CI/CD', 'Application Insights']
+    // Previous list — commented out, not deleted:
+    // skills: ['Azure', 'AWS S3', 'CloudFront', 'Lambda', 'API Gateway', 'Docker', 'Kubernetes', 'Terraform', 'GitHub Actions', 'CI/CD', 'Application Insights']
+    skills: ['Azure', 'AWS S3', 'CloudFront', 'Lambda', 'API Gateway', 'Terraform', 'GitHub Actions', 'CI/CD', 'Application Insights']
   },
   {
     title: 'Data & Integration',

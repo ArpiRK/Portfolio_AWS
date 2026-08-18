@@ -11,12 +11,22 @@ function About() {
         across financial services, and hands-on experience with modern cloud-native
         development on both Azure and AWS.
       </p>
+      {/* Previous copy — commented out, not deleted:
       <p className="about-text">
         I've led engineering teams at Accenture serving Fortune 100 clients,
         delivered systems handling 30K+ monthly transactions at sub-200ms latency,
         and currently modernizing legacy .NET systems to cloud-native architecture
         using AWS, React, Docker, and Kubernetes.
-        I also build AI-powered applications integrating LLMs (Claude API, GPT-4, 
+        I also build AI-powered applications integrating LLMs (Claude API, GPT-4,
+        Llama-3) and RAG pipelines into production cloud systems.
+        I hold an M.S. in Computer Science from Illinois Institute of Technology.
+      </p>
+      */}
+      <p className="about-text">
+        I've led engineering teams at Accenture serving Fortune 100 clients,
+        delivered systems processing 30K+ monthly transactions, and currently
+        modernizing legacy .NET systems to cloud-native architecture using AWS and React.
+        I also build AI-powered applications integrating LLMs (Claude API, GPT-4,
         Llama-3) and RAG pipelines into production cloud systems.
         I hold an M.S. in Computer Science from Illinois Institute of Technology.
       </p>
@@ -41,8 +51,14 @@ function About() {
         <div className="pillar">
           <div className="pillar-icon">☁️</div>
           <div className="pillar-title">Cloud & DevOps</div>
+          {/* Previous copy — commented out, not deleted:
           <p className="pillar-text">
             Azure and AWS, Docker, Kubernetes, Terraform, CI/CD — deploying
+            and operating systems at scale across cloud platforms.
+          </p>
+          */}
+          <p className="pillar-text">
+            Azure and AWS, Terraform, CI/CD — deploying
             and operating systems at scale across cloud platforms.
           </p>
         </div>
