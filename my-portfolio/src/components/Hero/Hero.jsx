@@ -9,8 +9,15 @@ function Hero() {
             <span></span>
             Open to new opportunities
           </div>
+          {/* Previous heading — commented out, not deleted:
           <h1 className="hero-title">
             Senior .NET Engineer<br />
+            building systems that<br />
+            <span className="accent">actually scale.</span>
+          </h1>
+          */}
+          <h1 className="hero-title">
+            .NET Engineer<br />
             building systems that<br />
             <span className="accent">actually scale.</span>
           </h1>

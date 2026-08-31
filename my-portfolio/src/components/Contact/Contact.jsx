@@ -38,7 +38,10 @@ function Contact() {
     <section className="contact" id="contact">
       <div className="section-label">Get In Touch</div>
       <h2 className="section-title">Let's Build Something Together</h2>
+      {/* Previous copy — commented out, not deleted:
       <p className="contact-desc">Have a senior .NET engineering opportunity? I am actively looking for my next role and would love to connect.</p>
+      */}
+      <p className="contact-desc">Have a .NET engineering opportunity? I am actively looking for my next role and would love to connect.</p>
 
       <div className="contact-grid">
 

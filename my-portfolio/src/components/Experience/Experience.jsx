@@ -10,7 +10,8 @@ function Experience() {
 
         <div className="timeline-item">
           <div className="timeline-header">
-            <div className="timeline-role">Senior Software Engineer (.NET)</div>
+            {/* Previous: <div className="timeline-role">Senior Software Engineer (.NET)</div> */}
+            <div className="timeline-role">IT Consultant</div>
             {/* Previous: <div className="timeline-period">Nov 2024 – Present</div> */}
             <div className="timeline-period">Nov 2024 – Jul 2026</div>
           </div>
@@ -25,6 +26,7 @@ function Experience() {
             <li>Integrated Claude API into production agentic chatbot — visitor intent detection, DynamoDB session memory, real-time Calendly scheduling, and resume delivery via SendGrid Lambda orchestration</li>
           </ul>
           */}
+          {/* Previous bullets — commented out, not deleted:
           <ul className="timeline-bullets">
             <li>Modernized 3 legacy .NET Framework applications to .NET 8 using clean architecture with CQRS (MediatR), async/await throughout, and EF Core repository pattern replacing manual ADO.NET queries</li>
             <li>Built and deployed React + Vite frontend on AWS S3 with CloudFront CDN and GitHub Actions CI/CD pipeline for zero-touch deployments</li>
@@ -32,13 +34,25 @@ function Experience() {
             <li>Validated modernized services through unit and integration tests using xUnit and Moq — enforced test coverage gates in CI/CD pipeline via GitHub Actions</li>
             <li>Executed phased, zero-downtime migration by running legacy and modernized services in parallel behind Azure API Management, routing traffic module-by-module as each was validated — enabling instant rollback to legacy on regression</li>
           </ul>
+          */}
+          <ul className="timeline-bullets">
+            <li>Modernized 3 legacy .NET Framework applications to .NET 8 using clean architecture with CQRS (MediatR), async/await throughout, and EF Core repository pattern replacing manual ADO.NET queries</li>
+            <li>Implemented OAuth 2.0/OIDC authentication with Azure AD across all migrated services, replacing legacy username/password flows with SSO</li>
+            <li>Validated modernized services through unit and integration tests using xUnit and Moq — enforced test coverage gates in CI/CD pipeline via GitHub Actions</li>
+            <li>Designed a phased, zero-downtime migration strategy using Azure API Management to run legacy and modernized services in parallel, enabling module-by-module traffic cutover with rollback capability</li>
+          </ul>
           <div className="timeline-tags">
             {/* Previous tags — commented out, not deleted:
             {['.NET 8', 'C#', 'React', 'AWS', 'Lambda', 'Docker', 'Kubernetes', 'OAuth 2.0', 'CQRS', 'GitHub Actions'].map(t => (
               <span className="timeline-tag" key={t}>{t}</span>
             ))}
             */}
+            {/* Previous tags — commented out, not deleted:
             {['.NET 8', 'C#', 'React', 'AWS', 'OAuth 2.0', 'CQRS', 'GitHub Actions'].map(t => (
+              <span className="timeline-tag" key={t}>{t}</span>
+            ))}
+            */}
+            {['.NET 8', 'C#', 'CQRS', 'Azure AD', 'OAuth 2.0', 'EF Core', 'GitHub Actions'].map(t => (
               <span className="timeline-tag" key={t}>{t}</span>
             ))}
           </div>
@@ -48,7 +62,8 @@ function Experience() {
           <div className="timeline-header">
             <div className="timeline-role">Software Engineer → Team Lead</div>
             {/* Previous: <div className="timeline-period">2014 – 2023</div> */}
-            <div className="timeline-period">Jan 2014 – Aug 2023</div>
+            {/* Previous: <div className="timeline-period">Jan 2014 – Aug 2023</div> */}
+            <div className="timeline-period">Sep 2014 – Aug 2023</div>
           </div>
           <div className="timeline-company">Accenture Solutions</div>
 

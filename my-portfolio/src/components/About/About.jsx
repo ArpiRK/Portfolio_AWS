@@ -6,10 +6,23 @@ function About() {
       <div className="section-label">Nice to meet you</div>
       <h2 className="section-title">Hi, I'm Arpitha.</h2>
 
+      {/* Previous copy — commented out, not deleted:
       <p className="about-text">
         I'm a Senior .NET Engineer with 9+ years building enterprise systems
         across financial services, and hands-on experience with modern cloud-native
         development on both Azure and AWS.
+      </p>
+      */}
+      <p className="about-text">
+        I'm a .NET Engineer with 9+ years building enterprise systems
+        across financial services, and hands-on experience with modern cloud-native
+        development on both Azure and AWS. I've led engineering teams at Accenture
+        serving Fortune 100 clients, delivered systems processing 30K+ monthly
+        transactions, and modernized legacy .NET Framework applications to .NET 8
+        with clean architecture and Azure AD authentication. I also build AI-powered
+        applications integrating LLMs (Claude API, GPT-4, Llama-3) and RAG pipelines
+        into production cloud systems. I hold an M.S. in Computer Science from
+        Illinois Institute of Technology.
       </p>
       {/* Previous copy — commented out, not deleted:
       <p className="about-text">
@@ -22,6 +35,7 @@ function About() {
         I hold an M.S. in Computer Science from Illinois Institute of Technology.
       </p>
       */}
+      {/* Previous copy — commented out, not deleted:
       <p className="about-text">
         I've led engineering teams at Accenture serving Fortune 100 clients,
         delivered systems processing 30K+ monthly transactions, and currently
@@ -30,6 +44,7 @@ function About() {
         Llama-3) and RAG pipelines into production cloud systems.
         I hold an M.S. in Computer Science from Illinois Institute of Technology.
       </p>
+      */}
 
       <div className="about-pillars">
         <div className="pillar">
