@@ -16,15 +16,31 @@ function Hero() {
             <span className="accent">actually scale.</span>
           </h1>
           */}
+          {/* Previous heading — commented out, not deleted:
           <h1 className="hero-title">
             .NET Engineer<br />
             building systems that<br />
             <span className="accent">actually scale.</span>
           </h1>
+          */}
+          <h1 className="hero-title">
+            Software Engineer<br />
+            building backend systems<br />
+            and AI apps that<br />
+            <span className="accent">actually scale.</span>
+          </h1>
+          {/* Previous subtitle — commented out, not deleted:
           <p className="hero-subtitle">
             9+ years building enterprise financial platforms. Modernizing
             legacy .NET systems to cloud-native architecture on Azure and AWS.
             Now integrating AI/LLM capabilities into production systems.
+            Based in Chicago, IL.
+          </p>
+          */}
+          <p className="hero-subtitle">
+            9+ years building enterprise financial platforms for Fortune 100
+            clients with C#, .NET, and SQL Server. Now building AI-powered
+            applications with the Claude API on AWS serverless.
             Based in Chicago, IL.
           </p>
           <div className="hero-buttons">

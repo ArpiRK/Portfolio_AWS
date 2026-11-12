@@ -35,11 +35,17 @@ function Experience() {
             <li>Executed phased, zero-downtime migration by running legacy and modernized services in parallel behind Azure API Management, routing traffic module-by-module as each was validated — enabling instant rollback to legacy on regression</li>
           </ul>
           */}
+          {/* Previous bullets — commented out, not deleted:
           <ul className="timeline-bullets">
             <li>Modernized 3 legacy .NET Framework applications to .NET 8 using clean architecture with CQRS (MediatR), async/await throughout, and EF Core repository pattern replacing manual ADO.NET queries</li>
             <li>Implemented OAuth 2.0/OIDC authentication with Azure AD across all migrated services, replacing legacy username/password flows with SSO</li>
             <li>Validated modernized services through unit and integration tests using xUnit and Moq — enforced test coverage gates in CI/CD pipeline via GitHub Actions</li>
             <li>Designed a phased, zero-downtime migration strategy using Azure API Management to run legacy and modernized services in parallel, enabling module-by-module traffic cutover with rollback capability</li>
+          </ul>
+          */}
+          <ul className="timeline-bullets">
+            <li>Contract role supporting enterprise network operations — configuration, software upgrades, and troubleshooting across Cisco and Palo Alto environments</li>
+            <li>Worked with monitoring and automation tools including Cisco Catalyst Center, SolarWinds, and ServiceNow Discovery</li>
           </ul>
           <div className="timeline-tags">
             {/* Previous tags — commented out, not deleted:
@@ -52,7 +58,12 @@ function Experience() {
               <span className="timeline-tag" key={t}>{t}</span>
             ))}
             */}
+            {/* Previous tags — commented out, not deleted:
             {['.NET 8', 'C#', 'CQRS', 'Azure AD', 'OAuth 2.0', 'EF Core', 'GitHub Actions'].map(t => (
+              <span className="timeline-tag" key={t}>{t}</span>
+            ))}
+            */}
+            {['Cisco', 'Palo Alto', 'ServiceNow', 'SolarWinds'].map(t => (
               <span className="timeline-tag" key={t}>{t}</span>
             ))}
           </div>
@@ -60,12 +71,15 @@ function Experience() {
 
         <div className="timeline-item">
           <div className="timeline-header">
-            <div className="timeline-role">Software Engineer → Team Lead</div>
+            {/* Previous: <div className="timeline-role">Software Engineer → Team Lead</div> */}
+            <div className="timeline-role">Associate Software Engineer → Team Lead</div>
             {/* Previous: <div className="timeline-period">2014 – 2023</div> */}
             {/* Previous: <div className="timeline-period">Jan 2014 – Aug 2023</div> */}
             <div className="timeline-period">Sep 2014 – Aug 2023</div>
           </div>
-          <div className="timeline-company">Accenture Solutions</div>
+          {/* Previous: <div className="timeline-company">Accenture Solutions</div> */}
+          <div className="timeline-company">Accenture · Bengaluru & Hyderabad, India</div>
+          <p className="timeline-desc">Associate (2014) → Software Engineer (2016) → Senior Software Engineer (2019) → Team Lead (2022)</p>
 
           {/* Previous sub-role breakdown (Team Lead / Senior SE / SE) — commented out, not deleted.
               Merged into one flat role per request — full role-by-role detail lives in the resume, not the portfolio.
@@ -100,17 +114,32 @@ function Experience() {
             </ul>
           </div>
           */}
+          {/* Previous bullets — commented out, not deleted:
           <ul className="timeline-bullets">
             <li>Built and mentored a 6-engineer team executing distributed financial automation; implemented RESTful API layer for SAP/BlackLine integration using ASP.NET Core Web API handling 10K+ requests/hour</li>
             <li>Architected real-time financial reporting dashboards backed by optimized SQL Server stored procedures — reduced report generation time by 60% for 5,000+ users, with additional query tuning achieving 30–70% gains</li>
             <li>Developed end-to-end BlackLine journal automation using ASP.NET Core and SSIS pipelines, processing 30K+ entries monthly and eliminating 200+ hours of manual reconciliation</li>
-            {/* Previous: <li>Implemented Azure AD SSO with OAuth 2.0, OIDC, and SAML 2.0 across enterprise client portals and tool suites, replacing legacy username/password flows</li> */}
+            Previous: <li>Implemented Azure AD SSO with OAuth 2.0, OIDC, and SAML 2.0 across enterprise client portals and tool suites, replacing legacy username/password flows</li>
             <li>Implemented Azure AD SSO with SAML 2.0 across enterprise client portals and tool suites, replacing legacy username/password flows</li>
             <li>Extended a .NET Framework financial close platform with modules for invoice matching, GL reconciliation, and journal approvals across 3 business units — maintained 99.9% uptime with zero P1 incidents via Application Insights monitoring</li>
           </ul>
+          */}
+          <ul className="timeline-bullets">
+            <li>Built and maintained enterprise applications on .NET Framework (4.x) using C#, ASP.NET Web API, Entity Framework, and SQL Server</li>
+            <li>Team Lead: Led and mentored 6 engineers; built a REST API layer for SAP/BlackLine integration handling 10K+ requests/hour; maintained 99.9% uptime with zero P1 incidents using Application Insights</li>
+            <li>Team Lead: Designed financial reporting dashboards backed by optimized SQL Server stored procedures, cutting report time by 60% for 5,000+ users</li>
+            <li>Senior Engineer: Automated BlackLine journal entries with .NET Framework and SSIS — 30K+ entries a month, saving 200+ hours of manual reconciliation; deployed .NET applications to Azure App Service with zero-downtime releases using deployment slots</li>
+            <li>Software Engineer: Improved report performance by 30–70% through SQL tuning; built system integrations with BizTalk Server and WCF</li>
+            <li>Associate: Incident management and production support, keeping zero Sev1/Sev2 incidents during key business events</li>
+          </ul>
 
           <div className="timeline-tags" style={{marginTop: '1rem'}}>
+            {/* Previous tags — commented out, not deleted:
             {['C#', 'ASP.NET Core', 'SQL Server', 'SSIS', 'BizTalk', 'Azure AD', 'OAuth 2.0', 'SAML 2.0', 'Application Insights', 'SAP', 'BlackLine'].map(t => (
+              <span className="timeline-tag" key={t}>{t}</span>
+            ))}
+            */}
+            {['C#', '.NET Framework', 'ASP.NET Web API', 'Entity Framework', 'SQL Server', 'SSIS', 'BizTalk', 'Azure AD', 'SAML 2.0', 'SAP', 'BlackLine'].map(t => (
               <span className="timeline-tag" key={t}>{t}</span>
             ))}
           </div>

@@ -6,7 +6,8 @@ const projects = [
   // Previous desc — commented out, not deleted:
   // desc: 'Production portfolio on AWS S3 + CloudFront with an agentic AI assistant — detects visitor intent, maintains DynamoDB session memory, sends resumes via SendGrid, checks real-time Calendly availability, and returns clickable booking slots. CI/CD via GitHub Actions.',
   // desc: 'Production portfolio on AWS S3 + CloudFront with an agentic AI assistant — detects visitor intent, maintains DynamoDB session memory, sends resumes via Amazon SES, checks real-time Calendly availability, and returns clickable booking slots. CI/CD via GitHub Actions.',
-  desc: 'Production portfolio on AWS S3 + CloudFront, backed by two API Gateway-fronted Lambda services — a REST API for resume/contact delivery via Amazon SES, and an HTTP API powering an AI chatbot (Claude API) with DynamoDB session memory and real-time Calendly scheduling. Secrets in Parameter Store; CI/CD via GitHub Actions.',
+  // desc: 'Production portfolio on AWS S3 + CloudFront, backed by two API Gateway-fronted Lambda services — a REST API for resume/contact delivery via Amazon SES, and an HTTP API powering an AI chatbot (Claude API) with DynamoDB session memory and real-time Calendly scheduling. Secrets in Parameter Store; CI/CD via GitHub Actions.',
+  desc: 'Live on this page — try the chat assistant! Production portfolio on AWS S3 + CloudFront, backed by two API Gateway-fronted Lambda services — a REST API for resume/contact delivery via Amazon SES, and an HTTP API powering an AI chatbot (Claude API) with DynamoDB session memory and real-time Calendly scheduling. Secrets in Parameter Store; CI/CD via GitHub Actions.',
   // Previous tags — commented out, not deleted:
   // tags: ['Claude API', 'AWS Lambda', 'React', 'S3', 'CloudFront', 'GitHub Actions','DynamoDB'],
   tags: ['Claude API', 'AWS Lambda', 'API Gateway', 'Amazon SES', 'React', 'S3', 'CloudFront', 'GitHub Actions', 'DynamoDB'],

@@ -2,24 +2,34 @@ import './Skills.css'
 
 const skillGroups = [
   {
-    title: '.NET & Backend',
+    // Previous title — commented out, not deleted:
+    // title: '.NET & Backend',
+    title: 'Backend',
     // Previous list — commented out, not deleted:
     // skills: ['C#', '.NET 8', 'ASP.NET Core', 'Entity Framework Core', 'Web API', 'REST APIs', 'Microservices', 'SOLID', 'Clean Architecture']
-    skills: ['C#', '.NET 8', 'ASP.NET Core', 'Entity Framework Core', 'Web API', 'REST APIs', 'SOLID', 'Clean Architecture']
+    // skills: ['C#', '.NET 8', 'ASP.NET Core', 'Entity Framework Core', 'Web API', 'REST APIs', 'SOLID', 'Clean Architecture']
+    // skills: ['C#', '.NET Framework', 'ASP.NET Core', '.NET 8', 'Web API', 'Entity Framework / EF Core', 'LINQ', 'WCF', 'REST APIs', 'SOLID']
+    skills: ['C#', '.NET Framework', 'ASP.NET Core', 'Web API', 'Entity Framework / EF Core', 'LINQ', 'WCF', 'REST APIs', 'SOLID']
   },
   {
     title: 'Identity & Auth',
-    skills: ['OAuth 2.0', 'OIDC', 'SAML 2.0', 'Azure AD', 'SSO', 'JWT', 'ASP.NET Core Identity', 'RBAC']
+    // Previous list — commented out, not deleted:
+    // skills: ['OAuth 2.0', 'OIDC', 'SAML 2.0', 'Azure AD', 'SSO', 'JWT', 'ASP.NET Core Identity', 'RBAC']
+    skills: ['OAuth 2.0', 'OIDC', 'SAML 2.0', 'Azure AD', 'SSO', 'JWT']
   },
   {
     title: 'Cloud & DevOps',
     // Previous list — commented out, not deleted:
     // skills: ['Azure', 'AWS S3', 'CloudFront', 'Lambda', 'API Gateway', 'Docker', 'Kubernetes', 'Terraform', 'GitHub Actions', 'CI/CD', 'Application Insights']
-    skills: ['Azure', 'AWS S3', 'CloudFront', 'Lambda', 'API Gateway', 'Terraform', 'GitHub Actions', 'CI/CD', 'Application Insights']
+    // skills: ['Azure', 'AWS S3', 'CloudFront', 'Lambda', 'API Gateway', 'Terraform', 'GitHub Actions', 'CI/CD', 'Application Insights']
+    skills: ['Azure', 'AWS S3', 'CloudFront', 'Lambda', 'API Gateway', 'DynamoDB', 'Amazon SES', 'GitHub Actions', 'CI/CD', 'Application Insights']
   },
   {
     title: 'Data & Integration',
-    skills: ['SQL Server', 'T-SQL', 'SSIS', 'ETL Pipelines', 'SAP', 'BlackLine', 'Service Bus']
+    // Previous list — commented out, not deleted:
+    // skills: ['SQL Server', 'T-SQL', 'SSIS', 'ETL Pipelines', 'SAP', 'BlackLine', 'Service Bus']
+    // skills: ['SQL Server', 'T-SQL', 'SSIS', 'BizTalk', 'ETL Pipelines', 'SAP', 'BlackLine', 'Service Bus']
+    skills: ['SQL Server', 'T-SQL', 'SSIS', 'BizTalk', 'ETL Pipelines', 'SAP', 'BlackLine']
   },
   {
     title: 'AI & Emerging',
@@ -27,7 +37,9 @@ const skillGroups = [
   },
   {
     title: 'Tools & Practices',
-    skills: ['Git', 'Visual Studio', 'Postman', 'Agile/Scrum', 'Azure Key Vault', 'IIS']
+    // Previous list — commented out, not deleted:
+    // skills: ['Git', 'Visual Studio', 'Postman', 'Agile/Scrum', 'Azure Key Vault', 'IIS']
+    skills: ['Git', 'Visual Studio', 'Postman', 'Agile/Scrum', 'IIS']
   }
 ]
 
